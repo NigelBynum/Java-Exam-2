@@ -38,7 +38,14 @@ public class BasicStringUtils {
      * @param charactersToRemove - Characters that should be removed from `string`
      * @return `string` with `charactersToRemove` removed
      */
-    public static String removeCharacters(String string, String charactersToRemove) {return null;
+    public static String removeCharacters(String string, String charactersToRemove) {
+        for (char B : charactersToRemove.toCharArray()) {
+
+
+            string = string.replace(Character.toString(B), "");
+        }
+
+        return string;
     }
 //
     //
