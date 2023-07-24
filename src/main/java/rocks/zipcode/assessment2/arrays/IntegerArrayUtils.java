@@ -10,7 +10,15 @@ public class IntegerArrayUtils {
      * @return - identical array with one additional element of `valueToBeAdded` at the end of the array
      */
     public static Integer[] add(Integer[] integerArray, Integer valueToBeAdded) {
-        return null;
+        Integer[] identical = new Integer[integerArray.length + 1];
+
+        for (int i = 0; i < integerArray.length; i++){
+            identical[i] = integerArray[i];
+
+            identical[integerArray.length] = valueToBeAdded;
+
+        }
+         return identical;
     }
 
     /**
@@ -34,7 +42,7 @@ public class IntegerArrayUtils {
      * @return element located at `indexToFetch`
      */
     public static Integer get(Integer[] integerArray, Integer indexToFetch) {
-        return null;
+        return integerArray[indexToFetch];
     }
 
     /**
@@ -42,7 +50,21 @@ public class IntegerArrayUtils {
      * @return identical array with even-values incremented by 1 and odd-values decremented by 1
      */
     public static Integer[] incrementEvenDecrementOdd(Integer[] integerArray) {
-        return null;
+        Integer[] identical = new Integer[integerArray.length];
+
+        for (int i = 0; i < integerArray.length; i++) {
+
+
+            if (integerArray[i] % 2 == 0) {
+                identical[i] = integerArray[i] + 1;
+            } else {
+
+                identical[i] = integerArray[i] - 1;
+            }
+        }
+
+        return identical;
+
     }
 
     /**
@@ -50,14 +72,50 @@ public class IntegerArrayUtils {
      * @return identical array with even-values incremented by 1
      */
     public static Integer[] incrementEven(Integer[] integerArray) {
-        return null;
+        Integer[] identical = new Integer[integerArray.length];
+
+        for (int i = 0; i < integerArray.length; i++) {
+
+
+            if (integerArray[i] % 2 == 0) {
+                identical[i] = integerArray[i] + 1;
+            } else {
+
+                identical[i] = integerArray[i];
+            }
+        }
+
+        return identical;
     }
+
 
     /**
      * @param input - array to be evaluated
      * @return identical array with odd-values decremented by 1
      */
-    public static Integer[] decrementOdd(Integer[] input) {
-        return null;
+    public static Integer[] decrementOdd(Integer[] input){
+
+        Integer[] identical = new Integer[input.length];
+
+        for (int i = 0; i < input.length; i++) {
+
+
+            if (input[i] % 2 != 0) {
+                identical[i] = input[i] - 1;
+            } else {
+
+                identical[i] = input[i];
+            }
+        }
+
+        return identical;
     }
-}
+
+
+
+
+    }
+
+
+
+
