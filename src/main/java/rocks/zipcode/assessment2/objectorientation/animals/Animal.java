@@ -20,8 +20,10 @@ private Address address;
      * @param owner - owner of animal
      */
     public Animal(Long id, Person owner) {
-        this.id= id;
+        this.address = owner.getAddress();
+        this.id= 0L;
         this.owner= owner;
+
     }
 
     public Long getId() {
@@ -39,11 +41,11 @@ private Address address;
     }
 
     public Address getAddress() {
-        return address;
+        return owner.getAddress();
     }
 
 
-    public void setAddress(Address addresss){this.address= address;}
+
 }
 
 

@@ -12,18 +12,20 @@ import java.util.Iterator;
  * Shelter<Person> farmHouse = new Shelter<Person>();
  * Shelter<Dog> dogHouse = new Shelter<Dog>();
  */
-public class Shelter<_>  {
+public class Shelter<_> implements Iterable  {
 
     List<Ageable>ageable;
+
     public Shelter() {
-        throw new NullPointerException();
+
+         this.ageable = new ArrayList<>();
     }
 
     /**
      * @return the number of item in the shelter
      */
     public int size() {
-        return -1;
+        return ageable.size() -1 ;
     }
 
     public void add(Object object) {
@@ -37,10 +39,15 @@ public class Shelter<_>  {
     }
 
     public Object get(Integer index) {
-        return null;
+        return ageable.get(index);
     }
 
     public Integer getIndexOf(Object ageable) {
         return 0;
+    }
+
+    @Override
+    public Iterator iterator() {
+        return null;
     }
 }

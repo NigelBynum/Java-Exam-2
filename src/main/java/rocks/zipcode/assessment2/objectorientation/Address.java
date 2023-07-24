@@ -9,8 +9,20 @@ public class Address {
     String city;
     String state;
     String zipcode;
+
+
+
     public Address() {
+        this.addressLine1 = "";
+        this.addressLine2="";
+        this.city = "";
+        this.zipcode= "";
+        this.state= "";
     }
+
+
+
+
 
     /**
      * @param addressLine1 - first address line
@@ -20,16 +32,20 @@ public class Address {
      * @param zipcode - zipcode of region
      */
     public Address(String addressLine1, String addressLine2, String city, String state, String zipcode) {
-   this.addressLine1 = "";
-   this.addressLine2="";
-   this.city = "";
-   this.zipcode= "";
-   this.state= "";
-
-
-
-
+   this.addressLine1 = addressLine1;
+   this.addressLine2= addressLine2;
+   this.city = city;
+   this.zipcode= zipcode;
+   this.state= state;
     }
+
+
+
+
+
+
+
+
 
     public String getAddressLine1() {
         return addressLine1;

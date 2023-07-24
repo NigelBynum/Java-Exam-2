@@ -5,7 +5,7 @@ package rocks.zipcode.assessment2.objectorientation;
  * @ATTENTION_TO_STUDENTS - Ensure that you have completed the `Address` class before attempting this class
  */
 public class Person {
-    long id;
+    Long id;
     String name;
     Address address;
     /**
@@ -15,12 +15,16 @@ public class Person {
      */
     public Person(Long id, String name, Address address) {
 
-        this.id = 0L;
+        this.id = id;
         this.name ="";
         this.address = new Address();
     }
 
     public Person() {
+        this.id = 0L;
+        this.name ="";
+        this.address = new Address();
+
     }
 
     public Long getId() {
