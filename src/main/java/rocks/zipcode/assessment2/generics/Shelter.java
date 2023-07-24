@@ -14,38 +14,38 @@ import java.util.Iterator;
  */
 public class Shelter<_> implements Iterable {
 
-    List<Ageable>ageables;
+    List<Ageable>agea;
 
     public Shelter() {
 
-         this.ageables = new ArrayList<>();
+         this.agea = new ArrayList<>();
     }
 
     /**
      * @return the number of item in the shelter
      */
     public int size() {
-        return ageables.size() ;
+        return agea.size() ;
     }
 
     public void add(Object object) {if(object instanceof  Ageable){
-        ageables.add((Ageable) object);
+        agea.add((Ageable) object);
     }
     }
 
     public Boolean contains(Object object) {
-          return ageables.contains((Ageable)object);
+          return agea.contains((Ageable)object);
     }
 
-    public void remove(Object object) {ageables.remove((Ageable) object);
+    public void remove(Object object) {agea.remove((Ageable) object);
     }
 
     public Object get(Integer index) {
-        return ageables.get(index);
+        return agea.get(index);
     }
 
     public Integer getIndexOf(Object ageable) {
-        return ageables.indexOf(ageable);
+        return agea.indexOf(ageable);
     }
 
     @Override

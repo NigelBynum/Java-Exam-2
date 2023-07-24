@@ -30,7 +30,7 @@ public class BasicStringUtils {
      * @return concatenation of the reverse of `string1` and reverse of `string2`
      */
     public static String reverseThenConcatenate(String string1, String string2) {
-        return null;
+        return reverse(string1).concat(reverse(string2));
     }
 
     /**
@@ -38,9 +38,7 @@ public class BasicStringUtils {
      * @param charactersToRemove - Characters that should be removed from `string`
      * @return `string` with `charactersToRemove` removed
      */
-    public static String removeCharacters(String string, String charactersToRemove) {
-
-        return null;
+    public static String removeCharacters(String string, String charactersToRemove) {return null;
     }
 
     /**
@@ -49,6 +47,6 @@ public class BasicStringUtils {
      * @return reverse of `string` with `charactersToRemove` removed
      */
     public static String removeCharactersThenReverse(String string, String charactersToRemove) {
-        return null;
+        return removeCharacters(reverse(string), charactersToRemove);
     }
 }
