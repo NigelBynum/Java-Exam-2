@@ -12,38 +12,40 @@ import java.util.Iterator;
  * Shelter<Person> farmHouse = new Shelter<Person>();
  * Shelter<Dog> dogHouse = new Shelter<Dog>();
  */
-public class Shelter<_> implements Iterable  {
+public class Shelter<_> implements Iterable {
 
-    List<Ageable>ageable;
+    List<Ageable>ageables;
 
     public Shelter() {
 
-         this.ageable = new ArrayList<>();
+         this.ageables = new ArrayList<>();
     }
 
     /**
      * @return the number of item in the shelter
      */
     public int size() {
-        return ageable.size() -1 ;
+        return ageables.size() ;
     }
 
-    public void add(Object object) {
+    public void add(Object object) {if(object instanceof  Ageable){
+        ageables.add((Ageable) object);
+    }
     }
 
     public Boolean contains(Object object) {
-        return null;
+          return ageables.contains((Ageable)object);
     }
 
-    public void remove(Object object) {
+    public void remove(Object object) {ageables.remove((Ageable) object);
     }
 
     public Object get(Integer index) {
-        return ageable.get(index);
+        return ageables.get(index);
     }
 
     public Integer getIndexOf(Object ageable) {
-        return 0;
+        return ageables.indexOf(ageable);
     }
 
     @Override
